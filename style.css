@@ -1,4 +1,5 @@
 
+/*-- PRE CONSTRUCT ----------------------------------------------------------*/
 html {
     background: #222222;
     height: 100%;
@@ -6,22 +7,29 @@ html {
     overflow: auto;
     scroll-behavior: smooth;
 }
-
 .unselectable {
-    user-select: none; /* Standard syntax */
-    -moz-user-select: none; /* Firefox */
-    -webkit-user-select: none; /* Safari and Chrome */
-    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.ag-format-container {
+    width: 1200px;
+    margin: 0 auto;
 }
 
-/* FOR BACKGROUND */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 /*-- HEADER -----------------------------------------------------------------*/
 #header-animation {
-    width: 100%; /* Set the width to fill the container */
-    height: auto; /* Let the height adjust proportionally */
+    width: 100%;
+    height: auto;
     position: relative;
-    background-color: black; /* Fallback color */
+    background-color: black;
     background-size: cover;
     background-position: center;
 }
@@ -31,7 +39,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Ensure the SVG doesn't capture mouse events */
+    pointer-events: none;
 }
 #header-animation text {
     fill: #ffffff;
@@ -39,7 +47,7 @@ html {
     font-family: Arial, sans-serif;
     dominant-baseline: middle;
     text-anchor: start;
-    text-shadow: 20px 20px 40px #222222; /* Add shadow */
+    text-shadow: 20px 20px 40px #222222;
 }
 
 /*-- HEADER ARTICLES --------------------------------------------------------*/
@@ -54,19 +62,20 @@ html {
     background: transparent;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
     width: 100%;
-    text-align: left; /* Ensure text alignment is consistent */
-    display: flex; /* Make the button a flex container */
-    align-items: center; /* Align items vertically in the center */
-    justify-content: center; /* Align items horizontally in the center */
-    padding-left: 20px; /* Adjust as needed */
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+
 
 }
 .article-button img {
-    margin-right: 10px;
-    width: 40px; /* Set the width of the image */
-    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px;
+    width: 40px;
+    height: auto;
 }
 .article-button h2 {
     margin: 0 0 0 0;
@@ -75,6 +84,9 @@ html {
     color: var(--title-color);
     transition: color 0.3s ease-out;
 }
+.small-fix {
+    margin-right: 15px;
+}
 
 /*-- CONTACT LINK BUTTONS ---------------------------------------------------*/
 .background-buttons {
@@ -82,12 +94,12 @@ html {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 15px; /* Adjust as needed */
-    background-color: #222222; /* Optional: Add a background color */
+    padding: 15px;
+    background-color: #222222;
 }
 .background-button {
-    width: 64px; /* Adjust button width as needed */
-    height: 64px; /* Adjust button height as needed */
+    width: 64px;
+    height: 64px;
     border-radius: 8px;
     cursor: pointer;
     overflow: hidden;
@@ -95,8 +107,8 @@ html {
     background-color: white;
 }
 .background-button img {
-    width: 100%; /* Make the image fill the button width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
 }
 .contact-email {
     text-align: center;
@@ -122,16 +134,15 @@ html {
     color: rgba(255, 255, 255, 0.45);
 }
 
-
-
-
-.ag-format-container {
-    width: 1200px;
-    margin: 0 auto;
+/*-- ARTICLES AND MAIN ARTICLE LISTING SETTINGS -----------------------------*/
+.articles {
+    display: grid;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
 }
-
-
-
 article {
     --img-scale: 1.001;
     --title-color: black;
@@ -144,6 +155,7 @@ article {
     transform-origin: center;
     transition: all 0.4s ease-in-out;
     overflow: hidden;
+
 }
 article h2 {
     margin: 0 0 0 0;
@@ -158,41 +170,35 @@ figure {
     aspect-ratio: 16 / 9;
     overflow: hidden;
 }
-
 article figure {
 
     margin: 0;
-    padding: 6px 1px 1px 1px; /* Adjust the padding as needed */
+    padding: 6px 1px 1px 1px;
     aspect-ratio: 16 / 9;
     overflow: hidden;
-    border-radius: 1px; /* Border radius for the entire figure */
+    border-radius: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 article figure img {
-    max-width: calc(100% - 32px); /* Adjust the width to accommodate padding */
-    border-radius: 16px; /* Border radius for the entire image */
+    max-width: calc(100% - 32px);
+    border-radius: 16px;
     object-fit: cover;
 
 }
-
 .article-body {
     padding: 24px;
 }
-
 article a {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
     color: #28666e;
 }
-
 article a:focus {
     outline: 1px dotted #28666e;
 }
-
 article a .icon {
     min-width: 24px;
     width: 24px;
@@ -202,76 +208,45 @@ article a .icon {
     opacity: var(--link-icon-opacity);
     transition: all 0.3s;
 }
-
-/* using the has() relational pseudo selector to update our custom properties */
 article:has(:hover, :focus) {
     --img-scale: 1.1;
     --title-color: #148543;
     --link-icon-translate: 0;
     --link-icon-opacity: 1;
-    box-shadow: rgba(0, 0, 0, 0.89) 0px 10px 36px 0px, rgba(0, 0, 0, 0.46) 0px 0px 0px 1px;
-}
+    box-shadow: rgba(0, 0, 0, 0.89) 0 10px 36px 0, rgba(0, 0, 0, 0.46) 0 0 0 1px;
+} /*colour*/
 
 
-/************************
-Generic layout (demo looks)
-**************************/
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/********************************************************************************
-Mobile screen support
- ********************************************************************************/
-.articles {
-    display: grid;
-    max-width: 1200px;
-    margin-inline: auto;
-    padding-inline: 24px;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 24px;
-}
-
-
+/*-- SEPARATOR and SECTION TAG ----------------------------------------------*/
 @media screen and (max-width: 960px) {
     .articles {
-        grid-template-columns: repeat(2, minmax(48%, 1fr)); /* Change from auto-fill to a fixed number of columns */
+        grid-template-columns: repeat(2, minmax(48%, 1fr));
     }
-
     #header-animation text {
-        font-size: 48px; /* Increase font size */
-        text-anchor: start; /* Align text to the left */
-        transform: translate(0, 0); /* Adjust position using transform */
+        font-size: 48px;
+        text-anchor: start;
+        transform: translate(0, 0);
     }
-
     .article-button h2 {
-        margin: -10px -20px -10px -20px;
-        font-size: 1.5rem;
+        margin: -12px 0 -12px -24px;
+        font-size: 1.4rem;
     }
     .head-articles {
         max-width: 92%;
         gap: 15px;
     }
-
     .section-description {
         font-size: 24px;
     }
-
-
 }
-
 @media screen and (max-width: 480px) {
 
     #header-animation text {
-        font-size: 48px; /* Increase font size */
-        text-anchor: start; /* Align text to the left */
-        transform: translate(0, 0); /* Adjust position using transform */
+        font-size: 48px;
+        text-anchor: start;
+        transform: translate(0, 0);
     }
-}
-
+} /*test*/
 @container card (min-width: 380px) {
     .article-wrapper {
         display: grid;
@@ -291,8 +266,7 @@ Mobile screen support
         aspect-ratio: 1;
         object-fit: cover;
     }
-}
-
+} /*test*/
 .sr-only:not(:focus):not(:active) {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
