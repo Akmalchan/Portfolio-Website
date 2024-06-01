@@ -2,31 +2,395 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bombaclatting website</title>
 </head>
+
+<!--BACKGROUND SETUP-->
+
+<!--BACKGROUND SETUP-->
+
 <body>
-<nav>
-    <div class="logo">Bombaclatting day</div>
-    <div class="nav-items">
-        <a href="/">Main</a>
-        <a href="/">Links</a>
-    </div>
-</nav>
 
 
-<section class="hero">
-    <div class="hero-container">
-        <div class="column-left">
-            <h1>Welcome to hell!</h1>
-            <p> BOMBACLAT </p>
-            <button>My LinkedIn Account</button>
-        </div>
-        <div class="column-right">
-            <img src="./OL2.jpg" alt="illustration" class="hero-image"
-            />
-        </div>
+
+<!--HEADER SECTION---------------------------------------------------------------------------->
+<header>
+    <!-- SVG Animation -->
+    <svg id="header-animation" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" overflow="hidden">
+        <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" overflow="hidden">
+            <defs>
+                <clipPath id="svg-clip">
+                    <rect x="0" y="0" width="600" height="300" />
+                </clipPath>
+
+                <pattern id="pattern" x="0" y="0" width="0.025" height="0.025">
+                    <rect id="block1" x="3" y="3" width="1.5" height="1.5" fill="#aaaaaa" />
+                    <rect id="block2" x="3" y="3" width="1.5" height="1.5" fill="#aaaaaa" />
+                </pattern>
+
+                <mask id="mask">
+                    <rect x="0" y="0" width="600" height="300" fill="#000000" />
+                    <circle id="c1" cx="300" cy="150" r="210" fill="#ffffff" />
+                    <circle id="c2" cx="300" cy="150" r="180" fill="#000000" />
+                    <circle id="c3" cx="300" cy="150" r="150" fill="#ffffff" />
+                    <circle id="c4" cx="300" cy="150" r="120" fill="#000000" />
+                    <circle id="c5" cx="300" cy="150" r="90" fill="#ffffff" />
+                    <circle id="c6" cx="300" cy="150" r="60" fill="#000000" />
+                    <circle id="c7" cx="300" cy="150" r="30" fill="#ffffff" />
+                    <circle id="c8" cx="300" cy="150" r="0" fill="#000000" />
+                    <circle id="c9" cx="300" cy="150" r="0" fill="#ffffff" />
+                </mask>
+
+            </defs>
+            <g id="container" class="hitarea">
+                <rect x="0" y="0" width="600" height="300" fill="#222222" />
+                <rect x="0" y="0" width="600" height="300" fill="url(#pattern)" mask="url(#mask)" />
+                <rect x="6%" y="22%" width="140" height="41" fill="#222222" opacity="0.97" />
+                <rect x="6%" y="35%" width="230" height="45" fill="#222222" opacity="0.97" />
+                <text x="7%" y="30%" fill="#222222" font-family="Arial, sans-serif" >Akmal</text>
+                <text x="7%" y="44%" fill="#222222" font-family="Arial, sans-serif" >Shovkatov</text>
+            </g>
+        </svg>
+    </svg>
+
+    <!-- Your main website's header content -->
+    <div class="header-content">
+        <h1 style="color: skyblue"></h1>
+        <p style="color: skyblue"></p>
     </div>
+
+</header>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script>
+    // Your JavaScript code here
+    var uiLock = false;
+    var reversed = false;
+
+    var $container = $('#container');
+
+    var $c1 = $('#c1');
+    var $c2 = $('#c2');
+    var $c3 = $('#c3');
+    var $c4 = $('#c4');
+    var $c5 = $('#c5');
+    var $c6 = $('#c6');
+    var $c7 = $('#c7');
+    var $c8 = $('#c8');
+    var $c9 = $('#c9');
+
+    var $block1 = $('#block1');
+    var $block2 = $('#block2');
+
+    var pixelTl = gsap.timeline({
+        repeat: -1
+    });
+
+    pixelTl.to($block1, 1, {
+        scaleY: 3,
+        transformOrigin: '50% 50%',
+        ease: 'steps(2)'
+    }, 0)
+        .to($block2, 1, {
+            scaleX: 3,
+            transformOrigin: '50% 50%',
+            ease: 'steps(2)'
+        }, 0)
+        .to([$block1, $block2], 2, {
+            rotation: 180,
+            transformOrigin: '50% 50%',
+            ease: 'steps(8)'
+        })
+        .to($block1, 1, {
+            scaleY: 1,
+            transformOrigin: '50% 50%',
+            ease: 'steps(2)'
+        }, 3)
+        .to($block2, 1, {
+            scaleX: 1,
+            transformOrigin: '50% 50%',
+            ease: 'steps(2)'
+        }, 3);
+
+
+
+    var bullseyeDur = 1.5;
+    var bullseyeTl = gsap.timeline({
+        repeat: -1,
+        callbackScope: this,
+        onReverseComplete: function () {
+            bullseyeTl.progress(1);
+            bullseyeTl.reverse();
+        }
+    });
+    //var bullseyeEase = Linear.easeNone;
+    var bullseyeEase = 'steps(12)';
+
+    bullseyeTl.to($c1, {
+        duration: bullseyeDur,
+        attr: { r: 270 },
+        ease: bullseyeEase
+    }, 0)
+        .to($c2, {
+            duration: bullseyeDur,
+            attr: { r: 240 },
+            ease: bullseyeEase
+        }, 0)
+        .to($c3, {
+            duration: bullseyeDur,
+            attr: { r: 210 },
+            ease: bullseyeEase
+        }, 0)
+        .to($c4, {
+            duration: bullseyeDur,
+            attr: { r: 180 },
+            ease: bullseyeEase
+        }, 0)
+        .to($c5, {
+            duration: bullseyeDur,
+            attr: { r: 150 },
+            ease: bullseyeEase
+        }, 0)
+        .to($c6, {
+            duration: bullseyeDur,
+            attr: { r: 120 },
+            ease: bullseyeEase
+        }, 0)
+        .to($c7, {
+            duration: bullseyeDur,
+            attr: { r: 90 },
+            ease: bullseyeEase
+        }, 0)
+        .to($c8, {
+            duration: bullseyeDur,
+            attr: { r: 60 },
+            ease: bullseyeEase
+        }, 0)
+        .to($c9, {
+            duration: bullseyeDur * 0.5,
+            attr: { r: 30 },
+            ease: bullseyeEase
+        }, bullseyeDur * 0.5);
+
+
+
+
+    /*
+     * Utility functions
+     */
+
+    function rand(min, max) {
+        return min + (Math.random() * (max - min));
+    }
+
+    function randInt(min, max) {
+        return Math.floor(min + (Math.random() * (max - min)));
+    }
+
+    function svgNs(tag) {
+        return document.createElementNS('http://www.w3.org/2000/svg', tag);
+    }
+</script>
+
+
+<section class="head-articles">
+    <article>
+        <button onclick="openPDF()" class="article-button" >
+            <img src="paper%20(1).png" alt="Button Image">
+            <div class="article-body">
+                <h2>Download CV</h2>
+            </div>
+        </button>
+    </article>
+    <article>
+        <button class="article-button" id="scrollButton">
+            <img src="contact.png" alt="Button Image">
+            <div class="article-body">
+                <h2>Contacts</h2>
+            </div>
+        </button>
+    </article>
+    <article>
+        <a href="https://github.com/Akmalchan/Portfolio-Website.git" target="_blank" class="article-button">
+            <button class="article-button">
+                <img src="code.png" alt="Button Image">
+                <div class="article-body">
+                    <h2>Source Code</h2>
+                </div>
+            </button>
+        </a>
+    </article>
 </section>
+
+<script>
+    function openPDF() {
+        window.open('CV1.pdf', '_blank');
+    }
+</script>
+
+<!--PROJECTS LISTING-------------------------------------------------------------------------->
+<hr class="separator">
+<div class="section-description unselectable">
+    < recent projects >
+</div>
+
+<section class="articles">
+    <article>
+        <div class="article-wrapper">
+            <figure>
+                <img src="dedsecgif.gif" alt="GIF" />
+            </figure>
+            <div class="article-body">
+                <h2>This is some title</h2>
+                <p>
+                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                </p>
+                <a href="#" class="read-more">
+                    Read more <span class="sr-only">about this is some title</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </article>
+    <article>
+
+        <div class="article-wrapper">
+            <figure>
+                <img src="dedsecgif1.gif" alt="GIF" />
+            </figure>
+            <div class="article-body">
+                <h2>This is some title</h2>
+                <p>
+                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                </p>
+                <a href="#" class="read-more">
+                    Read more <span class="sr-only">about this is some title</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </article>
+    <article>
+
+        <div class="article-wrapper">
+            <figure>
+                <img src="dedsecgif2.gif" alt="GIF" />
+            </figure>
+            <div class="article-body">
+                <h2>This is some title</h2>
+                <p>
+                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                </p>
+                <a href="#" class="read-more">
+                    Read more <span class="sr-only">about this is some title</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </article>
+    <article>
+        <div class="article-wrapper">
+            <figure>
+                <img src="dedsecgif.gif" alt="GIF" />
+            </figure>
+            <div class="article-body">
+                <h2>This is some title</h2>
+                <p>
+                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                </p>
+                <a href="#" class="read-more">
+                    Read more <span class="sr-only">about this is some title</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </article>
+    <article>
+
+        <div class="article-wrapper">
+            <figure>
+                <img src="dedsecgif1.gif" alt="GIF" />
+            </figure>
+            <div class="article-body">
+                <h2>This is some title</h2>
+                <p>
+                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                </p>
+                <a href="#" class="read-more">
+                    Read more <span class="sr-only">about this is some title</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </article>
+    <article>
+
+        <div class="article-wrapper">
+            <figure>
+                <img src="dedsecgif2.gif" alt="GIF" />
+            </figure>
+            <div class="article-body">
+                <h2>This is some title</h2>
+                <p>
+                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                </p>
+                <a href="#" class="read-more">
+                    Read more <span class="sr-only">about this is some title</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+<!--CONTACT INFO SECTION---------------------------------------------------------------------->
+<hr class="separator">
+<div class="section-description unselectable"  style="font-family: Consolas, monospace">
+    < contact links >
+</div>
+<div class="contact-email" style="font-family: Consolas, monospace">
+    <span class="unselectable">Email: </span>akmalshavkatov7@gmail.com
+</div>
+<div class="background-buttons">
+    <a href="https://www.linkedin.com/in/ashovkatov" target="_blank">
+        <button class="background-button"><img src="linkedin.png" alt="LinkedIn"></button>
+    </a>
+    <a href="https://x.com/AkmalShovkatov" target="_blank">
+        <button class="background-button"><img src="twitter.png" alt="Twitter"></button>
+    </a>
+    <a href="https://www.instagram.com/aladin_maddafaka/" target="_blank">
+        <button class="background-button"><img src="instagram.png" alt="Instagram"></button>
+    </a>
+    <a href="https://github.com/Akmalchan" target="_blank">
+        <button class="background-button"><img src="github.png" alt="GitHub"></button>
+    </a>
+</div>
+<div id="endOfPage"></div>
+<script>
+    // JavaScript for smooth scrolling to the end of the page
+    document.getElementById('scrollButton').addEventListener('click', function() {
+        document.getElementById('endOfPage').scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+
+
 </body>
+
+<meta name="viewport" content="width=640"/>
+
 </html>
