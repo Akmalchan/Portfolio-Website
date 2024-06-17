@@ -54,8 +54,15 @@ html {
 .head-articles {
     display: grid;
     max-width: 1150px;
-    margin: 0 auto;
+    margin: 10px auto;
     grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.head-articles-1 {
+    display: grid;
+    max-width: 1150px;
+    margin: 10px auto;
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 .article-button {
@@ -69,9 +76,14 @@ html {
     align-items: center;
     justify-content: center;
     padding-left: 20px;
-
-
 }
+.additional-setting {
+    margin-top: auto;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} /*--for 2nd sections of buttons--*/
 .article-button img {
     margin-right: 5px;
     width: 40px;
@@ -81,7 +93,6 @@ html {
     margin: 0 0 0 0;
     font-family: Consolas, monospace;
     font-size: 1.7rem;
-    color: var(--title-color);
     transition: color 0.3s ease-out;
 }
 .small-fix {
@@ -235,11 +246,19 @@ article:has(:hover, :focus) {
         max-width: 92%;
         gap: 15px;
     }
+    .additional-setting {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .head-articles-1 {
+        max-width: 92%;
+        gap: 15px;
+    }
     .section-description {
         font-size: 24px;
     }
 }
-@media screen and (max-width: 480px) {
+/*@media screen and (max-width: 480px) {
 
     #header-animation text {
         font-size: 48px;

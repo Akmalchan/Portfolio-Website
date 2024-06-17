@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Bombaclatting website</title>
+    <title>Akmal Shovkatov's Page</title>
 </head>
-
 <body>
-
 
 
 <!--HEADER SECTION---------------------------------------------------------------------------->
@@ -50,11 +48,6 @@
             </g>
         </svg>
     </svg>
-
-    <div class="header-content">
-        <h1 style="color: skyblue"></h1>
-        <p style="color: skyblue"></p>
-    </div>
 
 </header>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -189,7 +182,6 @@
     }
 </script>
 
-
 <section class="head-articles">
     <article>
         <button onclick="openPDF()" class="article-button" >
@@ -200,7 +192,7 @@
         </button>
     </article>
     <article>
-        <button class="article-button" id="scrollButton">
+        <button class="article-button" id="Contact Links Button">
             <img src="UI-content/contact.png" alt="Button Image">
             <div class="article-body">
                 <h2>Contact Info</h2>
@@ -218,17 +210,53 @@
         </a>
     </article>
 </section>
-
+<section class="head-articles-1">
+    <article>
+        <button class="article-button" id="Recommendations Button">
+            <div class="additional-setting">
+                <img src="UI-content/like.png" alt="Button Image">
+                <div class="article-body">
+                    <h2>Recommendations</h2>
+                </div>
+            </div>
+        </button>
+    </article>
+    <article>
+        <button class="article-button" id="Certificates Button">
+            <div class="additional-setting">
+                <img src="UI-content/badge.png" alt="Button Image">
+                <div class="article-body">
+                    <h2>Certificates</h2>
+            </div>
+            </div>
+        </button>
+    </article>
+</section>
 <script>
     function openPDF() {
         window.open('UI-content/CV1.pdf', '_blank');
     }
 </script>
+<script>
+    document.getElementById('Recommendations Button').addEventListener('click', function() {
+        document.getElementById('Recommendations').scrollIntoView({ behavior: 'smooth' });
+    });
+</script> <!--Scroll function (Recommendations)-->
+<script>
+    document.getElementById('Certificates Button').addEventListener('click', function() {
+        document.getElementById('Certificates').scrollIntoView({ behavior: 'smooth' });
+    });
+</script> <!--Scroll function (Certificates)-->
+<script>
+    document.getElementById('Contact Links Button').addEventListener('click', function() {
+        document.getElementById('Contact Links').scrollIntoView({ behavior: 'smooth' });
+    });
+</script> <!--Scroll function (Contacts)-->
 
-<!--PROJECTS LISTING-------------------------------------------------------------------------->
+<!--ARTICLES LISTING-------------------------------------------------------------------------->
 <hr class="separator">
 <div class="section-description unselectable">
-    < recent projects >
+    < Recent Projects >
 </div>
 
 <section class="articles">
@@ -352,11 +380,148 @@
     </article>
 </section>
 
+<!--RECOMMENDATIONS--------------------------------------------------------------------------->
+<hr class="separator">
+<div class="section-description unselectable" id="Recommendations">
+    < Recommendations >
+</div>
+
+<section class="articles">
+    <article>
+        <div class="article-wrapper">
+            <figure>
+                <img src="UI-content/dedsecgif.gif" alt="GIF" />
+            </figure>
+            <div class="article-body">
+                <h2>This is some title</h2>
+                <p>
+                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                </p>
+                <a href="#" class="read-more">
+                    Read more <span class="sr-only">about this is some title</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </article>
+    <article>
+
+        <div class="article-wrapper">
+            <figure>
+                <img src="UI-content/dedsecgif1.gif" alt="GIF" />
+            </figure>
+            <div class="article-body">
+                <h2>This is some title</h2>
+                <p>
+                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                </p>
+                <a href="#" class="read-more">
+                    Read more <span class="sr-only">about this is some title</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </article>
+    <article>
+
+        <div class="article-wrapper">
+            <figure>
+                <img src="UI-content/dedsecgif2.gif" alt="GIF" />
+            </figure>
+            <div class="article-body">
+                <h2>This is some title</h2>
+                <p>
+                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                </p>
+                <a href="#" class="read-more">
+                    Read more <span class="sr-only">about this is some title</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+<!--CERTIFICATES------------------------------------------------------------------------------>
+<hr class="separator">
+<div class="section-description unselectable" id="Certificates">
+    < Certificates & Awards >
+</div>
+
+<section class="articles">
+    <article>
+        <div class="article-wrapper">
+            <figure>
+                <img src="UI-content/dedsecgif.gif" alt="GIF" />
+            </figure>
+            <div class="article-body">
+                <h2>This is some title</h2>
+                <p>
+                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                </p>
+                <a href="#" class="read-more">
+                    Read more <span class="sr-only">about this is some title</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </article>
+    <article>
+
+        <div class="article-wrapper">
+            <figure>
+                <img src="UI-content/dedsecgif1.gif" alt="GIF" />
+            </figure>
+            <div class="article-body">
+                <h2>This is some title</h2>
+                <p>
+                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                </p>
+                <a href="#" class="read-more">
+                    Read more <span class="sr-only">about this is some title</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </article>
+    <article>
+
+        <div class="article-wrapper">
+            <figure>
+                <img src="UI-content/dedsecgif2.gif" alt="GIF" />
+            </figure>
+            <div class="article-body">
+                <h2>This is some title</h2>
+                <p>
+                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                </p>
+                <a href="#" class="read-more">
+                    Read more <span class="sr-only">about this is some title</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </article>
+</section>
+
 
 <!--CONTACT INFO SECTION---------------------------------------------------------------------->
 <hr class="separator">
 <div class="section-description unselectable"  style="font-family: Consolas, monospace">
-    < contact links >
+    < Contact Links >
 </div>
 <div class="contact-email" style="font-family: Consolas, monospace">
     <span class="unselectable">Email: </span>akmalshavkatov7@gmail.com
@@ -375,17 +540,14 @@
         <button class="background-button"><img src="UI-content/github.png" alt="GitHub"></button>
     </a>
 </div>
-<div id="endOfPage"></div>
-<script>
-    // JavaScript for smooth scrolling to the end of the page
-    document.getElementById('scrollButton').addEventListener('click', function() {
-        document.getElementById('endOfPage').scrollIntoView({ behavior: 'smooth' });
-    });
-</script>
+<div id="Contact Links"></div>
 
+
+<!--FOOTER------------------------------------------------------------------------------------>
+<div class="version"  style="font-family: Consolas, monospace; color: rgba(255, 255, 255, 0.40)">
+    Open Sharing, Shovkatov Akmal, June 2024 ver.001017062024
+</div>
 
 </body>
-
 <meta name="viewport" content="width=640"/>
-
 </html>
