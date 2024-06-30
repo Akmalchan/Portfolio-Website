@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,175 +11,207 @@
 
 <!--HEADER SECTION---------------------------------------------------------------------------->
 <header>
-    <!-- SVG Animation -->
-    <svg id="header-animation" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" overflow="hidden">
-        <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" overflow="hidden">
-            <defs>
-                <clipPath id="svg-clip">
-                    <rect x="0" y="0" width="600" height="300" />
-                </clipPath>
-
-                <pattern id="pattern" x="0" y="0" width="0.025" height="0.025">
-                    <rect id="block1" x="3" y="3" width="1.5" height="1.5" fill="#aaaaaa" />
-                    <rect id="block2" x="3" y="3" width="1.5" height="1.5" fill="#aaaaaa" />
-                </pattern>
-
-                <mask id="mask">
-                    <rect x="0" y="0" width="600" height="300" fill="#000000" />
-                    <circle id="c1" cx="300" cy="150" r="210" fill="#ffffff" />
-                    <circle id="c2" cx="300" cy="150" r="180" fill="#000000" />
-                    <circle id="c3" cx="300" cy="150" r="150" fill="#ffffff" />
-                    <circle id="c4" cx="300" cy="150" r="120" fill="#000000" />
-                    <circle id="c5" cx="300" cy="150" r="90" fill="#ffffff" />
-                    <circle id="c6" cx="300" cy="150" r="60" fill="#000000" />
-                    <circle id="c7" cx="300" cy="150" r="30" fill="#ffffff" />
-                    <circle id="c8" cx="300" cy="150" r="0" fill="#000000" />
-                    <circle id="c9" cx="300" cy="150" r="0" fill="#ffffff" />
-                </mask>
-
-            </defs>
-            <g id="container" class="hitarea">
-                <rect x="0" y="0" width="600" height="300" fill="#222222" />
-                <rect x="0" y="0" width="600" height="300" fill="url(#pattern)" mask="url(#mask)" />
-                <rect x="6%" y="22%" width="140" height="41" fill="#222222" opacity="0.97" />
-                <rect x="6%" y="35%" width="230" height="45" fill="#222222" opacity="0.97" />
-                <text x="7%" y="30%" fill="#222222" font-family="Arial, sans-serif" >Akmal</text>
-                <text x="7%" y="44%" fill="#222222" font-family="Arial, sans-serif" >Shovkatov</text>
-            </g>
-        </svg>
+    <svg id="pc-svg" viewBox="0 0 600 278" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" overflow="hidden">
+        <defs>
+            <clipPath id="svg-clip-pc">
+            <rect x="0" y="0" width="600" height="275" />
+        </clipPath>
+            <pattern id="pattern-pc" x="0" y="0" width="0.025" height="0.025">
+            <rect id="block1-pc" x="3" y="3" width="1.5" height="1.5" fill="#aaaaaa" />
+            <rect id="block2-pc" x="3" y="3" width="1.5" height="1.5" fill="#aaaaaa" />
+        </pattern>
+            <mask id="mask-pc">
+            <rect x="0" y="0" width="600" height="300" fill="#000000" />
+            <circle id="c1-pc" cx="300" cy="150" r="210" fill="#ffffff" />
+            <circle id="c2-pc" cx="300" cy="150" r="180" fill="#000000" />
+            <circle id="c3-pc" cx="300" cy="150" r="150" fill="#ffffff" />
+            <circle id="c4-pc" cx="300" cy="150" r="120" fill="#000000" />
+            <circle id="c5-pc" cx="300" cy="150" r="90" fill="#ffffff" />
+            <circle id="c6-pc" cx="300" cy="150" r="60" fill="#000000" />
+            <circle id="c7-pc" cx="300" cy="150" r="30" fill="#ffffff" />
+            <circle id="c8-pc" cx="300" cy="150" r="0" fill="#000000" />
+            <circle id="c9-pc" cx="300" cy="150" r="0" fill="#ffffff" />
+        </mask>
+        </defs>
+        <g id="container-pc" class="hitarea">
+            <rect x="0" y="0" width="600" height="300" fill="#222222" />
+            <rect x="0" y="0" width="600" height="300" fill="url(#pattern-pc)" mask="url(#mask-pc)" />
+            <rect x="6%" y="22%" width="140" height="41" fill="#222222" opacity="0.97" />
+            <rect x="6%" y="35%" width="230" height="45" fill="#222222" opacity="0.97" />
+            <rect x="69%" y="18%" width="100" height="100" fill="#222222" opacity="0.97" />
+            <text x="7%" y="30%" class="svg-text">Akmal</text>
+            <text x="7%" y="44%" class="svg-text">Shovkatov</text>
+            <image x="70%" y="20%" width="90" height="90" href="UI-content/Photo1.png" clip-path="url(#image-clip)"/>
+        </g>
     </svg>
-
+    <svg id="mobile-svg" viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" overflow="hidden">
+        <defs>
+            <clipPath id="svg-clip-mobile">
+                <rect x="0" y="0" width="300" height="450" />
+            </clipPath>
+            <pattern id="pattern-mobile" x="0" y="0" width="0.025" height="0.025">
+                <rect id="block1-mobile" x="3" y="3" width="1.5" height="1.5" fill="#aaaaaa" />
+                <rect id="block2-mobile" x="3" y="3" width="1.5" height="1.5" fill="#aaaaaa" />
+            </pattern>
+            <mask id="mask-mobile">
+                <rect x="0" y="0" width="300" height="450" fill="#000000" />
+                <circle id="c1-mobile" cx="150" cy="225" r="210" fill="#ffffff" />
+                <circle id="c2-mobile" cx="150" cy="225" r="180" fill="#000000" />
+                <circle id="c3-mobile" cx="150" cy="225" r="150" fill="#ffffff" />
+                <circle id="c4-mobile" cx="150" cy="225" r="120" fill="#000000" />
+                <circle id="c5-mobile" cx="150" cy="225" r="90" fill="#ffffff" />
+                <circle id="c6-mobile" cx="150" cy="225" r="60" fill="#000000" />
+                <circle id="c7-mobile" cx="150" cy="225" r="30" fill="#ffffff" />
+                <circle id="c8-mobile" cx="150" cy="225" r="0" fill="#000000" />
+                <circle id="c9-mobile" cx="150" cy="225" r="0" fill="#ffffff" />
+            </mask>
+        </defs>
+        <g id="container-mobile" class="hitarea">
+            <rect x="0" y="0" width="300" height="600" fill="#222222" />
+            <rect x="0" y="0" width="300" height="600" fill="url(#pattern-mobile)" mask="url(#mask-mobile)" />
+            <rect x="26%" y="42%" width="140" height="41" fill="#222222" opacity="0.97" />
+            <rect x="14%" y="52%" width="230" height="41" fill="#222222" opacity="0.97" />
+            <rect x="33%" y="17%" width="110" height="110" fill="#222222" opacity="0.97" />
+            <text x="28%" y="47%" class="svg-text">Akmal</text>
+            <text x="15%" y="57%" class="svg-text">Shovkatov</text>
+            <image x="34%" y="18%" width="100" height="100" href="UI-content/Photo1.png""/>
+        </g>
+    </svg>
 </header>
+
+<script>
+    function loadSvgForScreenSize() {
+        var pcSvg = document.getElementById('pc-svg');
+        var mobileSvg = document.getElementById('mobile-svg');
+
+        if (window.matchMedia("(max-width: 960px)").matches) {
+            // Mobile screen
+            mobileSvg.style.display = 'block';
+            pcSvg.style.display = 'none';
+        } else {
+            // PC screen
+            pcSvg.style.display = 'block';
+            mobileSvg.style.display = 'none';
+        }
+    }
+
+    window.onload = loadSvgForScreenSize;
+
+    window.onresize = loadSvgForScreenSize;
+</script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <script>
-    // Your JavaScript code here
-    var uiLock = false;
-    var reversed = false;
+    function loadSvgForScreenSize() {
+        var pcSvg = document.getElementById('pc-svg');
+        var mobileSvg = document.getElementById('mobile-svg');
 
-    var $container = $('#container');
-
-    var $c1 = $('#c1');
-    var $c2 = $('#c2');
-    var $c3 = $('#c3');
-    var $c4 = $('#c4');
-    var $c5 = $('#c5');
-    var $c6 = $('#c6');
-    var $c7 = $('#c7');
-    var $c8 = $('#c8');
-    var $c9 = $('#c9');
-
-    var $block1 = $('#block1');
-    var $block2 = $('#block2');
-
-    var pixelTl = gsap.timeline({
-        repeat: -1
-    });
-
-    pixelTl.to($block1, 1, {
-        scaleY: 3,
-        transformOrigin: '50% 50%',
-        ease: 'steps(2)'
-    }, 0)
-        .to($block2, 1, {
-            scaleX: 3,
-            transformOrigin: '50% 50%',
-            ease: 'steps(2)'
-        }, 0)
-        .to([$block1, $block2], 2, {
-            rotation: 180,
-            transformOrigin: '50% 50%',
-            ease: 'steps(8)'
-        })
-        .to($block1, 1, {
-            scaleY: 1,
-            transformOrigin: '50% 50%',
-            ease: 'steps(2)'
-        }, 3)
-        .to($block2, 1, {
-            scaleX: 1,
-            transformOrigin: '50% 50%',
-            ease: 'steps(2)'
-        }, 3);
-
-
-
-    var bullseyeDur = 1.5;
-    var bullseyeTl = gsap.timeline({
-        repeat: -1,
-        callbackScope: this,
-        onReverseComplete: function () {
-            bullseyeTl.progress(1);
-            bullseyeTl.reverse();
+        if (window.matchMedia("(max-width: 600px)").matches) {
+            // Mobile screen
+            mobileSvg.style.display = 'block';
+            pcSvg.style.display = 'none';
+            animateMobileSvg();
+        } else {
+            // PC screen
+            pcSvg.style.display = 'block';
+            mobileSvg.style.display = 'none';
+            animatePcSvg();
         }
-    });
-    //var bullseyeEase = Linear.easeNone;
-    var bullseyeEase = 'steps(12)';
-
-    bullseyeTl.to($c1, {
-        duration: bullseyeDur,
-        attr: { r: 270 },
-        ease: bullseyeEase
-    }, 0)
-        .to($c2, {
-            duration: bullseyeDur,
-            attr: { r: 240 },
-            ease: bullseyeEase
-        }, 0)
-        .to($c3, {
-            duration: bullseyeDur,
-            attr: { r: 210 },
-            ease: bullseyeEase
-        }, 0)
-        .to($c4, {
-            duration: bullseyeDur,
-            attr: { r: 180 },
-            ease: bullseyeEase
-        }, 0)
-        .to($c5, {
-            duration: bullseyeDur,
-            attr: { r: 150 },
-            ease: bullseyeEase
-        }, 0)
-        .to($c6, {
-            duration: bullseyeDur,
-            attr: { r: 120 },
-            ease: bullseyeEase
-        }, 0)
-        .to($c7, {
-            duration: bullseyeDur,
-            attr: { r: 90 },
-            ease: bullseyeEase
-        }, 0)
-        .to($c8, {
-            duration: bullseyeDur,
-            attr: { r: 60 },
-            ease: bullseyeEase
-        }, 0)
-        .to($c9, {
-            duration: bullseyeDur * 0.5,
-            attr: { r: 30 },
-            ease: bullseyeEase
-        }, bullseyeDur * 0.5);
-
-
-
-
-    /*
-     * Utility functions
-     */
-
-    function rand(min, max) {
-        return min + (Math.random() * (max - min));
     }
 
-    function randInt(min, max) {
-        return Math.floor(min + (Math.random() * (max - min)));
+    // Animation for PC screens
+    function animatePcSvg() {
+        var $c1 = $('#c1-pc');
+        var $c2 = $('#c2-pc');
+        var $c3 = $('#c3-pc');
+        var $c4 = $('#c4-pc');
+        var $c5 = $('#c5-pc');
+        var $c6 = $('#c6-pc');
+        var $c7 = $('#c7-pc');
+        var $c8 = $('#c8-pc');
+        var $c9 = $('#c9-pc');
+        var $block1 = $('#block1-pc');
+        var $block2 = $('#block2-pc');
+
+        var pixelTl = gsap.timeline({ repeat: -1 });
+
+        pixelTl.to($block1, 1, { scaleY: 3, transformOrigin: '50% 50%', ease: 'steps(2)' }, 0)
+            .to($block2, 1, { scaleX: 3, transformOrigin: '50% 50%', ease: 'steps(2)' }, 0)
+            .to([$block1, $block2], 2, { rotation: 180, transformOrigin: '50% 50%', ease: 'steps(8)' })
+            .to($block1, 1, { scaleY: 1, transformOrigin: '50% 50%', ease: 'steps(2)' }, 3)
+            .to($block2, 1, { scaleX: 1, transformOrigin: '50% 50%', ease: 'steps(2)' }, 3);
+
+        var bullseyeDur = 1.5;
+        var bullseyeTl = gsap.timeline({
+            repeat: -1,
+            callbackScope: this,
+            onReverseComplete: function () {
+                bullseyeTl.progress(1);
+                bullseyeTl.reverse();
+            }
+        });
+
+        var bullseyeEase = 'steps(12)';
+
+        bullseyeTl.to($c1, { duration: bullseyeDur, attr: { r: 270 }, ease: bullseyeEase }, 0)
+            .to($c2, { duration: bullseyeDur, attr: { r: 240 }, ease: bullseyeEase }, 0)
+            .to($c3, { duration: bullseyeDur, attr: { r: 210 }, ease: bullseyeEase }, 0)
+            .to($c4, { duration: bullseyeDur, attr: { r: 180 }, ease: bullseyeEase }, 0)
+            .to($c5, { duration: bullseyeDur, attr: { r: 150 }, ease: bullseyeEase }, 0)
+            .to($c6, { duration: bullseyeDur, attr: { r: 120 }, ease: bullseyeEase }, 0)
+            .to($c7, { duration: bullseyeDur, attr: { r: 90 }, ease: bullseyeEase }, 0)
+            .to($c8, { duration: bullseyeDur, attr: { r: 60 }, ease: bullseyeEase }, 0)
+            .to($c9, { duration: bullseyeDur * 0.5, attr: { r: 30 }, ease: bullseyeEase }, bullseyeDur * 0.5);
     }
 
-    function svgNs(tag) {
-        return document.createElementNS('http://www.w3.org/2000/svg', tag);
+    // Animation for Mobile screens
+    function animateMobileSvg() {
+        var $c1 = $('#c1-mobile');
+        var $c2 = $('#c2-mobile');
+        var $c3 = $('#c3-mobile');
+        var $c4 = $('#c4-mobile');
+        var $c5 = $('#c5-mobile');
+        var $c6 = $('#c6-mobile');
+        var $c7 = $('#c7-mobile');
+        var $c8 = $('#c8-mobile');
+        var $c9 = $('#c9-mobile');
+        var $block1 = $('#block1-mobile');
+        var $block2 = $('#block2-mobile');
+
+        var pixelTl = gsap.timeline({ repeat: -1 });
+
+        pixelTl.to($block1, 1, { scaleY: 3, transformOrigin: '50% 50%', ease: 'steps(2)' }, 0)
+            .to($block2, 1, { scaleX: 3, transformOrigin: '50% 50%', ease: 'steps(2)' }, 0)
+            .to([$block1, $block2], 2, { rotation: 180, transformOrigin: '50% 50%', ease: 'steps(8)' })
+            .to($block1, 1, { scaleY: 1, transformOrigin: '50% 50%', ease: 'steps(2)' }, 3)
+            .to($block2, 1, { scaleX: 1, transformOrigin: '50% 50%', ease: 'steps(2)' }, 3);
+
+        var bullseyeDur = 1.5;
+        var bullseyeTl = gsap.timeline({
+            repeat: -1,
+            callbackScope: this,
+            onReverseComplete: function () {
+                bullseyeTl.progress(1);
+                bullseyeTl.reverse();
+            }
+        });
+
+        var bullseyeEase = 'steps(12)';
+
+        bullseyeTl.to($c1, { duration: bullseyeDur, attr: { r: 270 }, ease: bullseyeEase }, 0)
+            .to($c2, { duration: bullseyeDur, attr: { r: 240 }, ease: bullseyeEase }, 0)
+            .to($c3, { duration: bullseyeDur, attr: { r: 210 }, ease: bullseyeEase }, 0)
+            .to($c4, { duration: bullseyeDur, attr: { r: 180 }, ease: bullseyeEase }, 0)
+            .to($c5, { duration: bullseyeDur, attr: { r: 150 }, ease: bullseyeEase }, 0)
+            .to($c6, { duration: bullseyeDur, attr: { r: 120 }, ease: bullseyeEase }, 0)
+            .to($c7, { duration: bullseyeDur, attr: { r: 90 }, ease: bullseyeEase }, 0)
+            .to($c8, { duration: bullseyeDur, attr: { r: 60 }, ease: bullseyeEase }, 0)
+            .to($c9, { duration: bullseyeDur * 0.5, attr: { r: 30 }, ease: bullseyeEase }, bullseyeDur * 0.5);
     }
+
+    loadSvgForScreenSize();
+
+    window.onresize = loadSvgForScreenSize;
 </script>
 
 <section class="head-articles">
@@ -210,48 +242,25 @@
         </a>
     </article>
 </section>
-<section class="head-articles-1">
-    <article>
-        <button class="article-button" id="Recommendations Button">
-            <div class="additional-setting">
-                <img src="UI-content/like.png" alt="Button Image">
-                <div class="article-body">
-                    <h2>Recommendations</h2>
-                </div>
-            </div>
-        </button>
-    </article>
-    <article>
-        <button class="article-button" id="Certificates Button">
-            <div class="additional-setting">
-                <img src="UI-content/badge.png" alt="Button Image">
-                <div class="article-body">
-                    <h2>Certificates</h2>
-            </div>
-            </div>
-        </button>
-    </article>
-</section>
 <script>
     function openPDF() {
-        window.open('UI-content/CV1.pdf', '_blank');
+        window.open('UI-content/CV_1.pdf', '_blank');
     }
 </script>
-<script>
-    document.getElementById('Recommendations Button').addEventListener('click', function() {
-        document.getElementById('Recommendations').scrollIntoView({ behavior: 'smooth' });
-    });
-</script> <!--Scroll function (Recommendations)-->
-<script>
-    document.getElementById('Certificates Button').addEventListener('click', function() {
-        document.getElementById('Certificates').scrollIntoView({ behavior: 'smooth' });
-    });
-</script> <!--Scroll function (Certificates)-->
 <script>
     document.getElementById('Contact Links Button').addEventListener('click', function() {
         document.getElementById('Contact Links').scrollIntoView({ behavior: 'smooth' });
     });
 </script> <!--Scroll function (Contacts)-->
+
+<!--TEXT-------------------------------------------------------------------------------------->
+<section class="bio-section">
+    <p>Hi! I am Akmal, sophomore at the San Francisco State University studying Computer Science with concentrations on
+        smart devices and artificial intelligence. I am passionate about using technologies to find solutions
+        for real-life problems. In particular, my technical interests include large-scale software systems,
+        computer vision models, cloud solutions, smart devices, autonomous machines, and financial tech.
+    </p>
+</section>
 
 <!--ARTICLES LISTING-------------------------------------------------------------------------->
 <hr class="separator">
@@ -261,261 +270,202 @@
 
 <section class="articles">
     <article>
-        <div class="article-wrapper">
+        <div class="article-wrapper" onclick="openModal('modal1')">
             <figure>
                 <img src="UI-content/dedsecgif.gif" alt="GIF" />
             </figure>
             <div class="article-body">
-                <h2>This is some title</h2>
-                <p>
-                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                <h2>Mobile Racing Game</h2>
+                <p class="article-subtitle">
+                    Created Racing Simulator Game using Unreal Engine 5 technology with full support of mobile devices and good graphics
                 </p>
-                <a href="#" class="read-more">
-                    Read more <span class="sr-only">about this is some title</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
+                <img class="article-logo" src="UI-content/UE_logo_small.png" alt="PNG" />
+                <img class="article-logo" src="UI-content/Blender_logo.png" alt="PNG" />
             </div>
         </div>
     </article>
     <article>
-
-        <div class="article-wrapper">
-            <figure>
-                <img src="UI-content/dedsecgif1.gif" alt="GIF" />
-            </figure>
-            <div class="article-body">
-                <h2>This is some title</h2>
-                <p>
-                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-                </p>
-                <a href="#" class="read-more">
-                    Read more <span class="sr-only">about this is some title</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </article>
-    <article>
-
-        <div class="article-wrapper">
-            <figure>
-                <img src="UI-content/dedsecgif2.gif" alt="GIF" />
-            </figure>
-            <div class="article-body">
-                <h2>This is some title</h2>
-                <p>
-                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-                </p>
-                <a href="#" class="read-more">
-                    Read more <span class="sr-only">about this is some title</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </article>
-    <article>
-        <div class="article-wrapper">
+        <div class="article-wrapper" onclick="openModal('modal2')">
             <figure>
                 <img src="UI-content/dedsecgif.gif" alt="GIF" />
             </figure>
             <div class="article-body">
-                <h2>This is some title</h2>
-                <p>
-                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                <h2>Mobile Souls  Like Game</h2>
+                <p class="article-subtitle">
+                    Created Action-RPG Game using Unreal Engine 5 technology with full support of mobile devices and good graphics
                 </p>
-                <a href="#" class="read-more">
-                    Read more <span class="sr-only">about this is some title</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
+                <img class="article-logo" src="UI-content/UE_logo_small.png" alt="PNG" />
+                <img class="article-logo" src="UI-content/Blender_logo.png" alt="PNG" />
             </div>
         </div>
     </article>
     <article>
-
-        <div class="article-wrapper">
+        <div class="article-wrapper" onclick="openModal('modal3')">
             <figure>
-                <img src="UI-content/dedsecgif1.gif" alt="GIF" />
+                <img src="UI-content/dedsecgif.gif" alt="GIF" />
             </figure>
             <div class="article-body">
-                <h2>This is some title</h2>
-                <p>
-                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+                <h2>Network Graphing App</h2>
+                <p class="article-subtitle">
+                    Created application using Python with support of Windows OS.
+                    Application creates Network Graphs from any given Excell tables
                 </p>
-                <a href="#" class="read-more">
-                    Read more <span class="sr-only">about this is some title</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </article>
-    <article>
-
-        <div class="article-wrapper">
-            <figure>
-                <img src="UI-content/dedsecgif2.gif" alt="GIF" />
-            </figure>
-            <div class="article-body">
-                <h2>This is some title</h2>
-                <p>
-                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-                </p>
-                <a href="#" class="read-more">
-                    Read more <span class="sr-only">about this is some title</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
+                <img class="article-logo" src="UI-content/python.png" alt="PNG" />
             </div>
         </div>
     </article>
 </section>
 
-<!--RECOMMENDATIONS--------------------------------------------------------------------------->
-<hr class="separator">
-<div class="section-description unselectable" id="Recommendations">
-    < Recommendations >
+<script>
+    function openModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Backspace' && document.getElementById('modal1').style.display === 'block') {
+            closeModal('modal1');
+        }
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Backspace' && document.getElementById('modal2').style.display === 'block') {
+            closeModal('modal2');
+        }
+    });
+</script>
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="closeBtn" onclick="closeModal('modal1')">&times;</span>
+        <div class="content-wrapper">
+            <div class="left-section">
+                <img src="UI-content/dedsecgif.gif" alt="Image 1" class="big-image">
+                <div class="small-images">
+                    <img src="UI-content/dedsecgif.gif" alt="Image 2" class="small-image">
+                    <img src="UI-content/dedsecgif.gif" alt="Image 3" class="small-image">
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="text-content">
+                    <h1 style="font-family: Consolas, monospace; font-size: 40px; color: black;">Mobile Racing Game</h1>
+                    <h2 style="font-family: Consolas, monospace; font-size: 20px; color: black; margin-top: -15px;">/Code Name "Track League"/</h2>
+                    <p style="font-family: Consolas, monospace; font-size: 18px; color: black; margin-top: 5px;">
+                        Racing Simulator Game made with Unreal Engine 5 technology.
+                        The project fully supports Android mobile devices without limitations.
+                        The final working version includes a fully functional main menu, vehicle garage, and one playable demo track level.<br>
+                        <span class="mobile-text-hide">&nbsp;This project features:</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Saving and replicating players' best race times</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Fully customizable vehicle customization</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Advanced racer and vehicle animations</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Advanced first-person gameplay</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Easily editable and replicable race track levels</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Cinematic animations</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Functional vehicle gearbox</span>
+                    </p>
+                </div>
+                <div class="link-buttons">
+                    <a href="https://www.unrealengine.com/" target="_blank">
+                        <img src="UI-content/UE_logo.png" alt="Image 1">
+                    </a>
+                    <div class="link-button-container">
+                        <a href="#" class="link-button">Source Code</a>
+                        <a href="#" class="link-button">Ready to Play App</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-<section class="articles">
-    <article>
-        <div class="article-wrapper">
-            <figure>
-                <img src="UI-content/dedsecgif.gif" alt="GIF" />
-            </figure>
-            <div class="article-body">
-                <h2>This is some title</h2>
-                <p>
-                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-                </p>
-                <a href="#" class="read-more">
-                    Read more <span class="sr-only">about this is some title</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="closeBtn" onclick="closeModal('modal2')">&times;</span>
+        <div class="content-wrapper">
+            <div class="left-section">
+                <img src="UI-content/dedsecgif.gif" alt="Image 1" class="big-image">
+                <div class="small-images">
+                    <img src="UI-content/dedsecgif.gif" alt="Image 2" class="small-image">
+                    <img src="UI-content/dedsecgif.gif" alt="Image 3" class="small-image">
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="text-content">
+                    <h1 style="font-family: Consolas, monospace; font-size: 40px; color: black;">Souls-Like Game</h1>
+                    <h2 style="font-family: Consolas, monospace; font-size: 20px; color: black; margin-top: -15px;">/Code Name "Broken Fate"/</h2>
+                    <p style="font-family: Consolas, monospace; font-size: 18px; color: black; margin-top: 5px;">
+                        This project is an Elden Ring-inspired action RPG designed for mobile devices,
+                        with full capabilities of Unreal Engine 5. The game features a fully operational and
+                        optimized open world spanning 2x2 miles. It also includes cutscene
+                        moments and epic boss fights for the player<br>
+                        <span class="mobile-text-hide">&nbsp;This project features:</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Includes one complete playable dungeon and a challenging boss</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Fully customizable character customization</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Advanced character and enemy animations</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Intelligent and adaptive enemy behavior</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Ensures smooth gameplay experience on a wide range of mobile devices</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• High-quality intro sequences and sound design</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Easily expandable content with potential for additional dungeons, bosses, and equipment</span>
+                    </p>
+                </div>
+                <div class="link-buttons">
+                    <a href="https://www.unrealengine.com/" target="_blank">
+                        <img src="UI-content/UE_logo.png" alt="Image 1">
+                    </a>
+                    <div class="link-button-container">
+                        <a href="#" class="link-button" style="font-family: Consolas, monospace; font-size: 19px;">Source Code</a>
+                        <a href="#" class="link-button" style="font-family: Consolas, monospace; font-size: 19px;">Ready to Play App</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </article>
-    <article>
-
-        <div class="article-wrapper">
-            <figure>
-                <img src="UI-content/dedsecgif1.gif" alt="GIF" />
-            </figure>
-            <div class="article-body">
-                <h2>This is some title</h2>
-                <p>
-                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-                </p>
-                <a href="#" class="read-more">
-                    Read more <span class="sr-only">about this is some title</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </article>
-    <article>
-
-        <div class="article-wrapper">
-            <figure>
-                <img src="UI-content/dedsecgif2.gif" alt="GIF" />
-            </figure>
-            <div class="article-body">
-                <h2>This is some title</h2>
-                <p>
-                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-                </p>
-                <a href="#" class="read-more">
-                    Read more <span class="sr-only">about this is some title</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </article>
-</section>
-
-
-<!--CERTIFICATES------------------------------------------------------------------------------>
-<hr class="separator">
-<div class="section-description unselectable" id="Certificates">
-    < Certificates & Awards >
+    </div>
 </div>
-
-<section class="articles">
-    <article>
-        <div class="article-wrapper">
-            <figure>
-                <img src="UI-content/dedsecgif.gif" alt="GIF" />
-            </figure>
-            <div class="article-body">
-                <h2>This is some title</h2>
-                <p>
-                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-                </p>
-                <a href="#" class="read-more">
-                    Read more <span class="sr-only">about this is some title</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="closeBtn" onclick="closeModal('modal3')">&times;</span>
+        <div class="content-wrapper">
+            <div class="left-section">
+                <img src="UI-content/dedsecgif.gif" alt="Image 1" class="big-image">
+                <div class="small-images">
+                    <img src="UI-content/dedsecgif.gif" alt="Image 2" class="small-image">
+                    <img src="UI-content/dedsecgif.gif" alt="Image 3" class="small-image">
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="text-content">
+                    <h1 style="font-family: Consolas, monospace; font-size: 40px; color: black;">Network Graphing App</h1>
+                    <h2 style="font-family: Consolas, monospace; font-size: 20px; color: black; margin-top: -15px;">/"------------------"/</h2>
+                    <p style="font-family: Consolas, monospace; font-size: 18px; color: black; margin-top: 5px;">
+                        This project is a Python-based application designed to build network graphs
+                        from user-provided Excel tables. The application features a streamlined interface
+                        with two main tabs, ensuring ease of use and efficient graph construction<br>
+                        <span class="mobile-text-hide">&nbsp;This project features:</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Enabling different settings for each parameter in the table</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Fully customizable graph parameters and aesthetics</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Advanced editable connection line for each parameter in the table</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Intelligent and efficient handling of large datasets</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Easily expandable with potential for additional graph types and data analysis tools</span>
+                    </p>
+                </div>
+                <div class="link-buttons">
+                    <a href="https://www.python.org/" target="_blank">
+                        <img src="UI-content/python.png" alt="Image 1">
+                    </a>
+                    <div class="link-button-container">
+                        <a href="#" class="link-button" style="font-family: Consolas, monospace; font-size: 19px;">Source Code</a>
+                        <a href="#" class="link-button" style="font-family: Consolas, monospace; font-size: 19px;">Ready to Play App</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </article>
-    <article>
-
-        <div class="article-wrapper">
-            <figure>
-                <img src="UI-content/dedsecgif1.gif" alt="GIF" />
-            </figure>
-            <div class="article-body">
-                <h2>This is some title</h2>
-                <p>
-                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-                </p>
-                <a href="#" class="read-more">
-                    Read more <span class="sr-only">about this is some title</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </article>
-    <article>
-
-        <div class="article-wrapper">
-            <figure>
-                <img src="UI-content/dedsecgif2.gif" alt="GIF" />
-            </figure>
-            <div class="article-body">
-                <h2>This is some title</h2>
-                <p>
-                    Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-                </p>
-                <a href="#" class="read-more">
-                    Read more <span class="sr-only">about this is some title</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </article>
-</section>
+    </div>
+</div>
 
 
 <!--CONTACT INFO SECTION---------------------------------------------------------------------->
@@ -544,8 +494,8 @@
 
 
 <!--FOOTER------------------------------------------------------------------------------------>
-<div class="version"  style="font-family: Consolas, monospace; color: rgba(255, 255, 255, 0.40)">
-    Open Sharing, Shovkatov Akmal, June 2024 ver.001017062024
+<div class="version"  style="font-family: Consolas, monospace; color: rgba(255, 255, 255, 0.40); font-size: 16px">
+    Open Sharing, Shovkatov Akmal, June 2024 ver.005029062024
 </div>
 
 </body>
