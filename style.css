@@ -303,6 +303,7 @@ article:has(:hover, :focus) {
     height: auto;
     margin-bottom: 10px;
     border-radius: 5px;
+    z-index: 2;
 }
 .small-images {
     display: flex;
@@ -349,6 +350,19 @@ article:has(:hover, :focus) {
 .link-buttons img {
     max-width: 100px;
     height: auto;
+}
+.video-text {
+    position: absolute;
+    flex: 1;
+    display: flex;
+    left: 25%;
+    top: 15%;
+    z-index: 1;
+    color: black;
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+    pointer-events: none;
 }
 
 /*-- MOBILE OPTIMIZER ------------------------------------------------------*/
@@ -402,10 +416,6 @@ article:has(:hover, :focus) {
     .link-button-container {
         flex-direction: column;
         align-items: end;
-    }
-    .link-button {
-        text-align: center;
-        font-size: 42px;
     }
     .closeBtn {
          top: -5px;
