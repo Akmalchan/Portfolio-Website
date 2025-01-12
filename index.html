@@ -253,7 +253,7 @@
     });
 </script> <!--Scroll function (Contacts)-->
 
-<!--TEXT-------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------TEXT-->
 <section class="bio-section">
     <p>Hi! I am Akmal, sophomore at the San Francisco State University studying Computer Science with concentrations on
         smart devices and artificial intelligence. I am passionate about using technologies to find solutions
@@ -262,13 +262,28 @@
     </p>
 </section>
 
-<!--ARTICLES LISTING-------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------ARTICLES LISTING-->
 <hr class="separator">
 <div class="section-description unselectable">
     < Recent Projects >
 </div>
 
 <section class="articles">
+    <article>
+        <div class="article-wrapper" onclick="openModal('modal4')">
+            <figure>
+                <img src="UI-content/AI_Chatbot_Intro.gif" alt="GIF" />
+            </figure>
+            <div class="article-body">
+                <h2>AI Chatbot "Znai"</h2>
+                <p class="article-subtitle">
+                    Created AI Chatbot using Google Gemini AI API and with full integration of MySQL for user profiles and datasets
+                </p>
+                <img class="article-logo" src="UI-content/sql_server.png" alt="PNG" />
+
+            </div>
+        </div>
+    </article>
     <article>
         <div class="article-wrapper" onclick="openModal('modal3')">
             <figure>
@@ -321,26 +336,39 @@
         var modal = document.getElementById(modalId);
         modal.style.display = "block";
         document.body.style.overflow = "hidden";
+        // Add a new history entry
+        history.pushState({ modalId: modalId }, null, null);
     }
+
 
     function closeModal(modalId) {
         var modal = document.getElementById(modalId);
         modal.style.display = "none";
         document.body.style.overflow = "auto";
+        // Remove the last history entry
+        history.back();
     }
 
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Backspace' && document.getElementById('modal1').style.display === 'block') {
-            closeModal('modal1');
+
+    window.addEventListener('popstate', function(event) {
+        if (event.state && event.state.modalId) {
+            // If there's a modalId in the state, close the corresponding modal
+            closeModal(event.state.modalId);
+        } else {
+            // If there's no state or modalId, ensure all modals are closed
+            closeAllModals();
         }
     });
 
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Backspace' && document.getElementById('modal2').style.display === 'block') {
-            closeModal('modal2');
+    function closeAllModals() {
+        var modals = document.getElementsByClassName('modal');
+        for (var i = 0; i < modals.length; i++) {
+            modals[i].style.display = 'none';
         }
-    });
+        document.body.style.overflow = 'auto';
+    }
 </script>
+    
 <div id="modal1" class="modal">
     <div class="modal-content">
         <span class="closeBtn" onclick="closeModal('modal1')">&times;</span>
@@ -354,7 +382,7 @@
                 <div class="video-text">Loading video...</div>
                 <div class="small-images">
                     <img src="UI-content/The_World_2.jpg" alt="Image 2" class="small-image">
-                    <img src="UI-content/The_World_4.png" alt="Image 3" class="small-image">
+                    <img src="UI-content/Project_V_3.png" alt="Image 3" class="small-image">
                 </div>
             </div>
             <div class="right-section">
@@ -480,6 +508,50 @@
         </div>
     </div>
 </div>
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="closeBtn" onclick="closeModal('modal4')">&times;</span>
+        <div class="content-wrapper">
+            <div class="left-section">
+                <video class="big-image" autoplay loop muted>
+                    <div class="video-text">Loading video...</div>
+                    <source src="UI-content/AI_Chatbot_1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="small-images">
+                    <img src="UI-content/AI_Chatbot_2.png" alt="Image 2" class="small-image">
+                    <img src="UI-content/AI_Chatbot_3.png" alt="Image 3" class="small-image">
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="text-content">
+                    <h1 style="font-family: Consolas, monospace; font-size: 40px; color: black;">AI Chatbot Website</h1>
+                    <h2 style="font-family: Consolas, monospace; font-size: 20px; color: black; margin-top: -15px;">Code Name "Double AA"</h2>
+                    <p style="font-family: Consolas, monospace; font-size: 18px; color: black; margin-top: 5px;">
+                        This project is a web-based application designed to provide an AI chatbot experience
+                        using the Gemini API. It features a secure MySQL-based user login system and a streamlined
+                        interface with well-structured webpages for seamless interaction. Developed with the approval
+                        of Professor Andrew Scott of San Francisco State University.
+                        <span class="mobile-text-hide">&nbsp;This project features:</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Real-time conversational AI powered by Google Gemini API</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Well pre-trained AI to give correct answers</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Secure MySQL-based user authentication</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Responsive, well-structured webpages</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Well structured net of landing pages</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Scalable and extendable chatbot functionality</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Efficient handling of user queries and large data</span>
+                    </p>
+                </div>
+                <div class="link-buttons">
+                    <a href="https://www.mysql.com/" target="_blank">
+                        <img src="UI-content/sql_server.png" alt="Image 1">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--CONTACT INFO SECTION---------------------------------------------------------------------->
 <hr class="separator">
@@ -505,10 +577,9 @@
 </div>
 <div id="Contact Links"></div>
 
-
 <!--FOOTER------------------------------------------------------------------------------------>
 <div class="version"  style="font-family: Consolas, monospace; color: rgba(255, 255, 255, 0.40); font-size: 16px">
-    Open Sharing, Shovkatov Akmal, July 2024 ver.006001072024
+    Open Sharing, Shovkatov Akmal, January 2025 ver.007012012025
 </div>
 
 </body>
