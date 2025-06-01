@@ -270,6 +270,23 @@
 
 <section class="articles">
     <article>
+        <div class="article-wrapper" onclick="openModal('modal5')">
+            <figure>
+                <img src="UI-content/Movemate_Intro.jpg" alt="GIF" />
+            </figure>
+            <div class="article-body">
+                <h2>Fitness App "MOVEMATE"</h2>
+                <p class="article-subtitle">
+                    MoveMate is a voice-guided fitness app using audio and body
+                    tracking to empower visually impaired users to work out independently
+                </p>
+                <img class="article-logo" src="UI-content/tensorflow.png" alt="PNG" />
+                <img class="article-logo" src="UI-content/python.png" alt="PNG" />
+
+            </div>
+        </div>
+    </article>
+    <article>
         <div class="article-wrapper" onclick="openModal('modal4')">
             <figure>
                 <img src="UI-content/AI_Chatbot_Intro.gif" alt="GIF" />
@@ -392,7 +409,7 @@
                     <p style="font-family: Consolas, monospace; font-size: 18px; color: black; margin-top: 5px;">
                         Racing Simulator Game made with Unreal Engine 4 technology.
                         The project fully supports Android mobile devices without limitations.
-                        The final working version includes a fully functional main menu, vehicle garage, and one playable demo track level.<br>
+                        The final working version includes a fully functional main menu, vehicle garage, and one playable demo track level.<br><br>
                         <span class="mobile-text-hide">&nbsp;This project features:</span>
                         <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Saving and replicating players' best race times</span>
                         <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Fully customizable vehicle customization</span>
@@ -440,7 +457,7 @@
                         This project is an Elden Ring-inspired action RPG designed for mobile devices,
                         with full capabilities of Unreal Engine 5. The game features a fully operational and
                         optimized open world spanning 2x2 miles. It also includes cutscene
-                        moments and epic boss fights for the player<br>
+                        moments and epic boss fights for the player<br><br>
                         <span class="mobile-text-hide">&nbsp;This project features:</span>
                         <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Includes one complete playable dungeon and a challenging boss</span>
                         <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Fully customizable character customization</span>
@@ -487,7 +504,7 @@
                         This project is a Python-based application designed to build network graphs
                         from user-provided Excel tables. The application features a streamlined interface
                         with two main tabs, ensuring ease of use and efficient graph construction. The project
-                        was made with the approval of Professor Jonathan Jacobson of San Francisco State University.<br>
+                        was made with the approval of Professor Jonathan Jacobson of San Francisco State University.<br><br>
                         <span class="mobile-text-hide">&nbsp;This project features:</span>
                         <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Enabling different settings for each parameter in the table</span>
                         <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Fully customizable graph parameters and aesthetics</span>
@@ -531,7 +548,7 @@
                         This project is a web-based application designed to provide an AI chatbot experience
                         using the Gemini API. It features a secure MySQL-based user login system and a streamlined
                         interface with well-structured webpages for seamless interaction. Developed with the approval
-                        of Professor Andrew Scott of San Francisco State University.
+                        of Professor Andrew Scott of San Francisco State University.<br><br>
                         <span class="mobile-text-hide">&nbsp;This project features:</span>
                         <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Real-time conversational AI powered by Google Gemini API</span>
                         <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Well pre-trained AI to give correct answers</span>
@@ -546,6 +563,55 @@
                     <a href="https://www.mysql.com/" target="_blank">
                         <img src="UI-content/sql_server.png" alt="Image 1">
                     </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="closeBtn" onclick="closeModal('modal5')">&times;</span>
+        <div class="content-wrapper">
+            <div class="left-section">
+                <video class="big-image" autoplay loop muted>
+                    <div class="video-text">Loading video...</div>
+                    <source src="UI-content/Movemate_1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="small-images">
+                    <img src="UI-content/Movemate_2.jpg" alt="Image 2" class="small-image">
+                    <img src="UI-content/Movemate_3.jpg" alt="Image 3" class="small-image">
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="text-content">
+                    <h1 style="font-family: Consolas, monospace; font-size: 40px; color: black;">MoveMate (SFHacks 2025)</h1>
+                    <h2 style="font-family: Consolas, monospace; font-size: 20px; color: black; margin-top: -15px;">Inclusive Fitness App for the Visually Impaired</h2>
+                    <p style="font-family: Consolas, monospace; font-size: 18px; color: black; margin-top: 5px;">
+                        MoveMate is a web-based, voice-guided fitness app designed for visually impaired users.
+                        Most workout platforms rely on visuals, leaving out a key community. MoveMate solves
+                        this by combining voice commands, audio instructions, and real-time body tracking to
+                        guide users through basic exercises, all screen-free and hands-free.<br>
+                        Hackathon project built in 2 days at SF Hacks 2025 by a team of 4.<br><br>
+                        <span class="mobile-text-hide">&nbsp;This project features:</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Real-time body tracking with TensorFlow.js and MoveNet</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Voice input and feedback using the Web Speech API</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Fully audio accessible interface with high contrast and large fonts</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• HTML, CSS, and JavaScript-based frontend</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Designed for independence, safety, and confidence</span>
+                        <span class="mobile-text-hide" style="display: block; margin-top: 10px;">• Built with inclusive UX principles and browser compatibility in mind</span>
+                    </p>
+                </div>
+                <div class="link-buttons">
+                    <a href="https://www.tensorflow.org/" target="_blank">
+                        <img src="UI-content/tensorflow.png" alt="Image 1">
+                    </a>
+                    <div class="link-button-container">
+                        <a href="https://github.com/Armankd1/SFHacks2025" class="link-button" style="font-family: Consolas,
+                        monospace; font-size: 19px;" target="_blank">Source Code</a>
+                        <a href="https://devpost.com/software/movemate-3hrcj5" class="link-button" style="font-family: Consolas, monospace; font-size: 19px;" target="_blank">DevPost</a>
+                </div>
 
                 </div>
             </div>
@@ -568,9 +634,7 @@
     <a href="https://x.com/AkmalShovkatov" target="_blank">
         <button class="background-button"><img src="UI-content/twitter.png" alt="Twitter"></button>
     </a>
-    <a href="https://www.instagram.com/aladin_maddafaka/" target="_blank">
-        <button class="background-button"><img src="UI-content/instagram.png" alt="Instagram"></button>
-    </a>
+
     <a href="https://github.com/Akmalchan" target="_blank">
         <button class="background-button"><img src="UI-content/github.png" alt="GitHub"></button>
     </a>
@@ -579,7 +643,7 @@
 
 <!--FOOTER------------------------------------------------------------------------------------>
 <div class="version"  style="font-family: Consolas, monospace; color: rgba(255, 255, 255, 0.40); font-size: 16px">
-    Open Sharing, Shovkatov Akmal, January 2025 ver.007012012025
+    Open Sharing, Shovkatov Akmal, June 2025 ver.00801062025
 </div>
 
 </body>
